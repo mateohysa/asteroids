@@ -56,8 +56,7 @@ while(True):
             sys.exit()
         for shot in shots:
             if things.collides_with(shot):
-                log_event("asteroid_shot")
-                things.kill()
+                things.split()
                 shot.kill()
     pygame.display.flip()
     dt = time.tick(60)/1000
